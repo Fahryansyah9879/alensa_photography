@@ -1,46 +1,42 @@
-import { Instagram } from "lucide-react";
+import { Instagram } from 'lucide-react';
 
 const TikTokIcon = () => (
-  <svg 
-    className="w-5 h-5" 
-    viewBox="0 0 24 24" 
-    fill="currentColor"
-  >
-    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+  <svg className='w-5 h-5' viewBox='0 0 24 24' fill='currentColor'>
+    <path d='M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z' />
   </svg>
 );
 
 const Footer = () => {
   return (
-    <footer className="px-6 py-10 animate-bounce-in-up stagger-6">
+    <footer className='px-6 py-10 animate-bounce-in-up stagger-6'>
       {/* Thin Separator */}
-      <div className="w-12 h-[1px] bg-border mx-auto mb-8" />
-      
+      <div className='w-12 h-[1px] bg-border mx-auto mb-8' />
+
       {/* Social Icons */}
-      <div className="flex justify-center gap-6 mb-8">
+      <div className='flex justify-center gap-6 mb-8'>
         <a
-          href="https://instagram.com/potobae.id"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300"
-          aria-label="Instagram"
+          href='https://www.instagram.com/potobae.id/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300'
+          aria-label='Instagram'
         >
-          <Instagram className="w-5 h-5" />
+          <Instagram className='w-5 h-5' />
         </a>
         <a
-          href="https://tiktok.com/@potobae.id"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300"
-          aria-label="TikTok"
+          href='https://tiktok.com/@potobae.id'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300'
+          aria-label='TikTok'
         >
           <TikTokIcon />
         </a>
       </div>
 
       {/* Footer Text */}
-      <p className="text-center text-xs tracking-wide text-muted-foreground/60">
-        Made with 💙 for young creators
+      <p className='text-center text-xs tracking-wide text-muted-foreground/60'>
+        © 2026 POTOBAE. ALL RIGHTS RESERVED.
       </p>
     </footer>
   );
