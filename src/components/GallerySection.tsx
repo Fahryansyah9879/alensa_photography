@@ -1,43 +1,65 @@
+import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
+import { useParallax } from "@/hooks/useParallax";
+
+const ParallaxImage = ({ 
+  src, 
+  alt, 
+  className 
+}: { 
+  src: string; 
+  alt: string; 
+  className?: string;
+}) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const offset = useParallax(ref, 0.05);
+
+  return (
+    <div ref={ref} className={`overflow-hidden rounded-sm parallax-container ${className}`}>
+      <img
+        src={src}
+        alt={alt}
+        className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
+        style={{ 
+          transform: `translateY(${offset}px) scale(1.1)`,
+        }}
+      />
+    </div>
+  );
+};
 
 const GallerySection = () => {
   return (
-    <section className="px-6 pb-10 opacity-0 animate-fade-in-up animation-delay-200">
+    <section className="px-6 pb-10">
       {/* Asymmetric Masonry Grid */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-3 animate-fade-in-up stagger-4">
         {/* Large Vertical Image */}
-        <div className="row-span-2 overflow-hidden rounded-sm">
-          <img
-            src={gallery1}
-            alt="Portrait Photography"
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-          />
-        </div>
+        <ParallaxImage 
+          src={gallery1} 
+          alt="Portrait Photography" 
+          className="row-span-2"
+        />
 
         {/* Top Small Square */}
-        <div className="aspect-square overflow-hidden rounded-sm">
-          <img
-            src={gallery2}
-            alt="Wedding Photography"
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-          />
-        </div>
+        <ParallaxImage 
+          src={gallery2} 
+          alt="Wedding Photography" 
+          className="aspect-square"
+        />
 
         {/* Bottom Small Square */}
-        <div className="aspect-square overflow-hidden rounded-sm">
-          <img
-            src={gallery3}
-            alt="Detail Photography"
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-          />
-        </div>
+        <ParallaxImage 
+          src={gallery3} 
+          alt="Detail Photography" 
+          className="aspect-square"
+        />
       </div>
 
       {/* View Portfolio Link */}
-      <div className="flex items-center justify-center mt-6 group cursor-pointer">
+      <div className="flex items-center justify-center mt-6 group cursor-pointer animate-fade-in-up stagger-5">
         <span className="text-xs tracking-wide text-muted-foreground group-hover:text-foreground transition-colors duration-300">
           View Portfolio
         </span>
