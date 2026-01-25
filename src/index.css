@@ -109,11 +109,11 @@
 }
 
 @layer utilities {
-  /* Fade In Animations */
+  /* Staggered Fade-in Animation */
   @keyframes fade-in-up {
     0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     100% {
       opacity: 1;
@@ -139,8 +139,40 @@
     }
   }
 
+  /* Shimmer Effect for Button */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsla(var(--gold), 0);
+    }
+    50% {
+      box-shadow: 0 0 20px 2px hsla(var(--gold), 0.3);
+    }
+  }
+
+  /* Sticky Header Animation */
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   .animate-fade-in-up {
-    animation: fade-in-up 0.8s ease-out forwards;
+    animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
   }
 
   .animate-fade-in {
@@ -151,33 +183,42 @@
     animation: subtle-float 3s ease-in-out infinite;
   }
 
-  .animation-delay-100 {
-    animation-delay: 100ms;
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--primary)) 40%,
+      hsl(var(--gold)) 50%,
+      hsl(var(--primary)) 60%,
+      hsl(var(--primary)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
   }
 
-  .animation-delay-200 {
-    animation-delay: 200ms;
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
   }
 
-  .animation-delay-300 {
-    animation-delay: 300ms;
+  .animate-slide-down {
+    animation: slide-down 0.3s ease-out forwards;
   }
 
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
+  /* Stagger delays */
+  .stagger-1 { animation-delay: 0ms; }
+  .stagger-2 { animation-delay: 150ms; }
+  .stagger-3 { animation-delay: 300ms; }
+  .stagger-4 { animation-delay: 450ms; }
+  .stagger-5 { animation-delay: 600ms; }
+  .stagger-6 { animation-delay: 750ms; }
 
-  .animation-delay-500 {
-    animation-delay: 500ms;
-  }
-
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
-
-  .animation-delay-700 {
-    animation-delay: 700ms;
-  }
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-700 { animation-delay: 700ms; }
 
   /* Hover Effects */
   .hover-lift {
@@ -188,6 +229,17 @@
     transform: translateY(-2px);
   }
 
+  /* Parallax Effect */
+  .parallax-container {
+    perspective: 1000px;
+    overflow: hidden;
+  }
+
+  .parallax-image {
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+  }
+
   /* Gold Border Ring */
   .ring-gold {
     box-shadow: 0 0 0 2px hsl(var(--gold));
@@ -196,5 +248,10 @@
   /* Thin elegant border */
   .border-elegant {
     border: 1px solid hsl(var(--border));
+  }
+
+  /* Sticky Header Styles */
+  .sticky-header {
+    @apply fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border;
   }
 }

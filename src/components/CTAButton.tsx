@@ -14,13 +14,13 @@ const CTAButton = () => {
   };
 
   return (
-    <section className="px-6 py-8 opacity-0 animate-fade-in-up animation-delay-500">
+    <section className="px-6 py-8 animate-fade-in-up stagger-6">
       <button
         onClick={handleWhatsAppClick}
-        className="w-full bg-primary text-primary-foreground py-4 px-6 rounded-sm flex items-center justify-center hover-lift hover:bg-primary/90 transition-all duration-300"
+        className="w-full py-4 px-6 rounded-sm flex items-center justify-center hover-lift transition-all duration-300 animate-shimmer animate-pulse-glow text-primary-foreground"
       >
         <WhatsAppIcon />
-        <span className="text-sm tracking-wide">
+        <span className="text-sm tracking-wide font-medium">
           SECURE YOUR DATE VIA WHATSAPP
         </span>
       </button>

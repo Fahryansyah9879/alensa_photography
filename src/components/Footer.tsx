@@ -12,7 +12,7 @@ const TikTokIcon = () => (
 
 const Footer = () => {
   return (
-    <footer className="px-6 py-10 opacity-0 animate-fade-in-up animation-delay-600">
+    <footer className="px-6 py-10 animate-fade-in-up stagger-6">
       {/* Thin Separator */}
       <div className="w-12 h-[1px] bg-border mx-auto mb-8" />
       
@@ -22,7 +22,7 @@ const Footer = () => {
           href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-gold transition-colors duration-300"
+          className="text-muted-foreground hover:text-gold hover:scale-110 transition-all duration-300"
           aria-label="Instagram"
         >
           <Instagram className="w-5 h-5" />
@@ -31,7 +31,7 @@ const Footer = () => {
           href="https://tiktok.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-gold transition-colors duration-300"
+          className="text-muted-foreground hover:text-gold hover:scale-110 transition-all duration-300"
           aria-label="TikTok"
         >
           <TikTokIcon />

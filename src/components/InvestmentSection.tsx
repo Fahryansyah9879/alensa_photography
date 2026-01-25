@@ -2,15 +2,15 @@ import { Check } from "lucide-react";
 
 const InvestmentSection = () => {
   return (
-    <section className="px-6 py-10 opacity-0 animate-fade-in-up animation-delay-400">
+    <section className="px-6 py-10">
       {/* Section Heading */}
-      <h2 className="font-serif text-xl tracking-wide text-center mb-8">
+      <h2 className="font-serif text-xl tracking-wide text-center mb-8 animate-fade-in-up stagger-5">
         INVESTMENT
       </h2>
 
       <div className="space-y-4">
         {/* Essential Card */}
-        <div className="bg-card border border-border rounded-sm p-6 hover-lift">
+        <div className="bg-card border border-border rounded-sm p-6 hover-lift animate-fade-in-up stagger-5">
           <h3 className="font-serif text-lg tracking-wide mb-1">
             ESSENTIAL SESSION
           </h3>
@@ -33,7 +33,7 @@ const InvestmentSection = () => {
         </div>
 
         {/* Signature Card - Premium Dark */}
-        <div className="bg-primary text-primary-foreground rounded-sm p-6 hover-lift">
+        <div className="bg-primary text-primary-foreground rounded-sm p-6 hover-lift animate-fade-in-up stagger-6">
           <h3 className="font-serif text-lg tracking-wide mb-1">
             SIGNATURE STORY
           </h3>
