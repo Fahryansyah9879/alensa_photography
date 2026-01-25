@@ -3,9 +3,9 @@ import profileImage from "@/assets/profile.jpg";
 const ProfileHeader = () => {
   return (
     <header className="flex flex-col items-center pt-12 pb-8">
-      {/* Profile Image with Gold Ring */}
-      <div className="relative mb-6 animate-fade-in-up stagger-1">
-        <div className="w-28 h-28 rounded-full p-[2px] bg-gradient-to-br from-gold to-gold-light">
+      {/* Profile Image with Soft Blue Ring */}
+      <div className="relative mb-6 animate-bounce-in-up stagger-1">
+        <div className="w-28 h-28 rounded-full p-[3px] bg-gradient-to-br from-primary to-accent">
           <div className="w-full h-full rounded-full overflow-hidden bg-background p-[2px]">
             <img
               src={profileImage}
@@ -16,14 +16,14 @@ const ProfileHeader = () => {
         </div>
       </div>
 
-      {/* Name */}
-      <h1 className="font-serif text-2xl tracking-wide text-foreground mb-2 animate-fade-in-up stagger-2">
-        AURORA CHEN
+      {/* Name - Sentence Case, Friendly */}
+      <h1 className="font-heading text-2xl tracking-wide text-foreground mb-2 animate-bounce-in-up stagger-2">
+        Potobae Studio
       </h1>
 
-      {/* Subtitle */}
-      <p className="text-[10px] tracking-ultra-wide text-muted-foreground uppercase animate-fade-in-up stagger-3">
-        Capturing Timeless Moments
+      {/* Subtitle - Friendly & Approachable */}
+      <p className="text-sm tracking-wide text-muted-foreground animate-bounce-in-up stagger-3">
+        Your memories, beautifully captured ✨
       </p>
     </header>
   );

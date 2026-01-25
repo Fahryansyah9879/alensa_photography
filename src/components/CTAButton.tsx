@@ -1,6 +1,6 @@
 const WhatsAppIcon = () => (
   <svg 
-    className="w-4 h-4 mr-2" 
+    className="w-5 h-5 mr-2" 
     viewBox="0 0 24 24" 
     fill="currentColor"
   >
@@ -10,18 +10,18 @@ const WhatsAppIcon = () => (
 
 const CTAButton = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/6281234567890?text=Hi, I'd like to book a photography session", "_blank");
+    window.open("https://wa.me/6281234567890?text=Halo, saya mau booking sesi foto!", "_blank");
   };
 
   return (
-    <section className="px-6 py-8 animate-fade-in-up stagger-6">
+    <section className="px-6 py-8 animate-bounce-in-up stagger-6">
       <button
         onClick={handleWhatsAppClick}
-        className="w-full py-4 px-6 rounded-sm flex items-center justify-center hover-lift transition-all duration-300 animate-shimmer animate-pulse-glow text-primary-foreground"
+        className="w-full py-4 px-6 rounded-[20px] flex items-center justify-center bg-primary text-primary-foreground hover-lift transition-all duration-300 animate-soft-pulse font-heading font-medium"
       >
         <WhatsAppIcon />
-        <span className="text-sm tracking-wide font-medium">
-          SECURE YOUR DATE VIA WHATSAPP
+        <span className="text-sm tracking-wide">
+          Chat via WhatsApp
         </span>
       </button>
     </section>

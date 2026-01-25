@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,72 +6,70 @@
 
 @layer base {
   :root {
-    /* Luxury Cream Palette */
-    --background: 30 33% 97%;
-    --foreground: 0 0% 18%;
+    /* Clean White Palette - @potobae.id */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 18%;
+    --card-foreground: 220 13% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 18%;
+    --popover-foreground: 220 13% 18%;
 
-    /* Deep Charcoal Primary */
-    --primary: 0 0% 18%;
-    --primary-foreground: 30 33% 97%;
+    /* Soft Blue Primary */
+    --primary: 212 72% 59%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Muted Gold Accent */
-    --accent: 40 51% 56%;
-    --accent-foreground: 0 0% 18%;
+    /* Mint Accent */
+    --accent: 150 32% 78%;
+    --accent-foreground: 220 13% 18%;
 
-    --secondary: 30 20% 92%;
-    --secondary-foreground: 0 0% 18%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 13% 18%;
 
-    --muted: 30 15% 90%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 210 15% 95%;
+    --muted-foreground: 220 9% 46%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 15% 85%;
-    --input: 30 15% 85%;
-    --ring: 40 51% 56%;
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 212 72% 59%;
 
-    --radius: 0.25rem;
+    --radius: 1.25rem;
 
-    /* Custom Luxury Variables */
-    --cream: 30 33% 97%;
-    --charcoal: 0 0% 18%;
-    --gold: 40 51% 56%;
-    --gold-light: 40 51% 70%;
+    /* Custom Variables */
+    --soft-blue: 212 72% 59%;
+    --mint: 150 32% 78%;
     
     /* Typography */
-    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-heading: 'Montserrat', system-ui, sans-serif;
     --font-sans: 'Inter', system-ui, sans-serif;
     
     /* Spacing */
-    --letter-spacing-wide: 0.3em;
-    --letter-spacing-normal: 0.1em;
+    --letter-spacing-wide: 0.1em;
+    --letter-spacing-normal: 0.02em;
   }
 
   .dark {
-    --background: 0 0% 18%;
-    --foreground: 30 33% 97%;
-    --card: 0 0% 22%;
-    --card-foreground: 30 33% 97%;
-    --popover: 0 0% 22%;
-    --popover-foreground: 30 33% 97%;
-    --primary: 30 33% 97%;
-    --primary-foreground: 0 0% 18%;
-    --secondary: 0 0% 25%;
-    --secondary-foreground: 30 33% 97%;
-    --muted: 0 0% 25%;
-    --muted-foreground: 30 15% 70%;
-    --accent: 40 51% 56%;
-    --accent-foreground: 30 33% 97%;
-    --border: 0 0% 30%;
-    --input: 0 0% 30%;
-    --ring: 40 51% 56%;
+    --background: 220 13% 18%;
+    --foreground: 0 0% 100%;
+    --card: 220 13% 22%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 13% 22%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 212 72% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 13% 25%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 13% 25%;
+    --muted-foreground: 210 15% 70%;
+    --accent: 150 32% 78%;
+    --accent-foreground: 0 0% 100%;
+    --border: 220 13% 30%;
+    --input: 220 13% 30%;
+    --ring: 212 72% 59%;
   }
 }
 
@@ -87,12 +85,14 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: var(--font-sans);
+    font-weight: 300;
   }
 }
 
 @layer components {
-  .font-serif {
-    font-family: var(--font-serif);
+  .font-heading {
+    font-family: var(--font-heading);
+    font-weight: 600;
   }
 
   .font-sans {
@@ -109,8 +109,26 @@
 }
 
 @layer utilities {
-  /* Staggered Fade-in Animation */
-  @keyframes fade-in-up {
+  /* Bounce Slide-up Animation - Energetic feel */
+  @keyframes bounce-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-8px) scale(1.02);
+    }
+    80% {
+      transform: translateY(4px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes slide-up {
     0% {
       opacity: 0;
       transform: translateY(30px);
@@ -139,22 +157,24 @@
     }
   }
 
-  /* Shimmer Effect for Button */
-  @keyframes shimmer {
+  /* Soft Pulse Effect for Button */
+  @keyframes soft-pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 4px 20px hsla(var(--primary), 0.2);
+    }
+    50% {
+      transform: scale(1.02);
+      box-shadow: 0 6px 30px hsla(var(--primary), 0.35);
+    }
+  }
+
+  @keyframes shimmer-blue {
     0% {
       background-position: -200% center;
     }
     100% {
       background-position: 200% center;
-    }
-  }
-
-  @keyframes pulse-glow {
-    0%, 100% {
-      box-shadow: 0 0 0 0 hsla(var(--gold), 0);
-    }
-    50% {
-      box-shadow: 0 0 20px 2px hsla(var(--gold), 0.3);
     }
   }
 
@@ -170,8 +190,13 @@
     }
   }
 
-  .animate-fade-in-up {
-    animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  .animate-bounce-in-up {
+    animation: bounce-in-up 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     opacity: 0;
   }
 
@@ -183,21 +208,21 @@
     animation: subtle-float 3s ease-in-out infinite;
   }
 
-  .animate-shimmer {
+  .animate-soft-pulse {
+    animation: soft-pulse 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer-blue {
     background: linear-gradient(
       90deg,
       hsl(var(--primary)) 0%,
       hsl(var(--primary)) 40%,
-      hsl(var(--gold)) 50%,
+      hsl(var(--accent)) 50%,
       hsl(var(--primary)) 60%,
       hsl(var(--primary)) 100%
     );
     background-size: 200% 100%;
-    animation: shimmer 3s ease-in-out infinite;
-  }
-
-  .animate-pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
+    animation: shimmer-blue 3s ease-in-out infinite;
   }
 
   .animate-slide-down {
@@ -240,9 +265,9 @@
     will-change: transform;
   }
 
-  /* Gold Border Ring */
-  .ring-gold {
-    box-shadow: 0 0 0 2px hsl(var(--gold));
+  /* Accent Border Ring */
+  .ring-accent {
+    box-shadow: 0 0 0 2px hsl(var(--accent));
   }
 
   /* Thin elegant border */
