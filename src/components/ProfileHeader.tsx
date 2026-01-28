@@ -18,12 +18,12 @@ const ProfileHeader = () => {
 
       {/* Name - Sentence Case, Friendly */}
       <h1 className='font-heading text-2xl tracking-wide text-foreground mb-2 animate-bounce-in-up stagger-2'>
-        Potobae
+        Alensa Photography
       </h1>
 
       {/* Subtitle - Friendly & Approachable */}
-      <p className='text-sm tracking-wide text-muted-foreground animate-bounce-in-up stagger-3'>
-        Graduation Photographer
+      <p className='text-sm tracking-wide text-muted-foreground animate-bounce-in-up stagger-3 text-center'>
+        Studio & Wedding Photography based in Ponorogo.
       </p>
     </header>
   );

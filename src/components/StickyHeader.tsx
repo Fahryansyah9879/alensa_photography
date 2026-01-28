@@ -19,11 +19,11 @@ const StickyHeader = () => {
     <div className='sticky-header animate-slide-down'>
       <div className='max-w-md mx-auto px-6 py-3 flex items-center justify-center'>
         <h1 className='font-heading text-sm tracking-wide text-foreground'>
-          Potobae
+          Alensa Photography
         </h1>
         <span className='mx-3 w-[1px] h-3 bg-primary opacity-50' />
         <span className='text-xs tracking-wide text-muted-foreground'>
-          📸 Photographer
+          Portfolio
         </span>
       </div>
     </div>

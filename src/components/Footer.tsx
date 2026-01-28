@@ -15,7 +15,7 @@ const Footer = () => {
       {/* Social Icons */}
       <div className='flex justify-center gap-6 mb-8'>
         <a
-          href='https://www.instagram.com/potobae.id/'
+          href='https://www.instagram.com/alensa_photography/'
           target='_blank'
           rel='noopener noreferrer'
           className='text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300'
@@ -24,7 +24,7 @@ const Footer = () => {
           <Instagram className='w-5 h-5' />
         </a>
         <a
-          href='https://tiktok.com/@potobae.id'
+          href='https://www.tiktok.com/@alensa.photograph'
           target='_blank'
           rel='noopener noreferrer'
           className='text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300'
@@ -36,7 +36,7 @@ const Footer = () => {
 
       {/* Footer Text */}
       <p className='text-center text-xs tracking-wide text-muted-foreground/60'>
-        © 2026 POTOBAE. ALL RIGHTS RESERVED.
+        © 2026 Alensa Photography. All rights reserved.
       </p>
     </footer>
   );

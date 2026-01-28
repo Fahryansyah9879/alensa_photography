@@ -6,50 +6,39 @@
 
 @layer base {
   :root {
-    /* Clean White Palette - @potobae.id */
-    --background: 0 0% 100%;
-    --foreground: 220 13% 18%;
+    /* Creamy Beige Palette */
+    --background: 34 33% 96%;
+    --foreground: 25 20% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 13% 18%;
+    --card-foreground: 25 20% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 18%;
+    --popover-foreground: 25 20% 20%;
 
-    /* Soft Blue Primary */
-    --primary: 212 72% 59%;
-    --primary-foreground: 0 0% 100%;
+    /* Terracotta / Burnt Orange Primary */
+    --primary: 22 65% 50%;
+    --primary-foreground: 34 33% 96%;
 
-    /* Mint Accent */
-    --accent: 150 32% 78%;
-    --accent-foreground: 220 13% 18%;
+    /* Sage Green Accent */
+    --accent: 76 18% 75%;
+    --accent-foreground: 25 20% 20%;
 
-    --secondary: 210 20% 96%;
-    --secondary-foreground: 220 13% 18%;
+    --secondary: 34 30% 90%;
+    --secondary-foreground: 25 20% 20%;
 
-    --muted: 210 15% 95%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 34 30% 92%;
+    --muted-foreground: 25 10% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 210 15% 90%;
-    --input: 210 15% 90%;
-    --ring: 212 72% 59%;
+    --border: 34 20% 88%;
+    --input: 34 20% 88%;
+    --ring: 22 65% 50%;
 
     --radius: 1.25rem;
 
-    /* Custom Variables */
-    --soft-blue: 212 72% 59%;
-    --mint: 150 32% 78%;
-    
     /* Typography */
-    --font-heading: 'Montserrat', system-ui, sans-serif;
+    --font-heading: 'Lora', serif; /* Font yang lebih warm */
     --font-sans: 'Inter', system-ui, sans-serif;
-    
-    /* Spacing */
-    --letter-spacing-wide: 0.1em;
-    --letter-spacing-normal: 0.02em;
   }
 
   .dark {
@@ -149,7 +138,8 @@
   }
 
   @keyframes subtle-float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {
@@ -159,7 +149,8 @@
 
   /* Soft Pulse Effect for Button */
   @keyframes soft-pulse {
-    0%, 100% {
+    0%,
+    100% {
       transform: scale(1);
       box-shadow: 0 4px 20px hsla(var(--primary), 0.2);
     }
@@ -230,20 +221,46 @@
   }
 
   /* Stagger delays */
-  .stagger-1 { animation-delay: 0ms; }
-  .stagger-2 { animation-delay: 150ms; }
-  .stagger-3 { animation-delay: 300ms; }
-  .stagger-4 { animation-delay: 450ms; }
-  .stagger-5 { animation-delay: 600ms; }
-  .stagger-6 { animation-delay: 750ms; }
+  .stagger-1 {
+    animation-delay: 0ms;
+  }
+  .stagger-2 {
+    animation-delay: 150ms;
+  }
+  .stagger-3 {
+    animation-delay: 300ms;
+  }
+  .stagger-4 {
+    animation-delay: 450ms;
+  }
+  .stagger-5 {
+    animation-delay: 600ms;
+  }
+  .stagger-6 {
+    animation-delay: 750ms;
+  }
 
-  .animation-delay-100 { animation-delay: 100ms; }
-  .animation-delay-200 { animation-delay: 200ms; }
-  .animation-delay-300 { animation-delay: 300ms; }
-  .animation-delay-400 { animation-delay: 400ms; }
-  .animation-delay-500 { animation-delay: 500ms; }
-  .animation-delay-600 { animation-delay: 600ms; }
-  .animation-delay-700 { animation-delay: 700ms; }
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
 
   /* Hover Effects */
   .hover-lift {

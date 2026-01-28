@@ -7,7 +7,18 @@ const WhatsAppIcon = () => (
 const CTAButton = () => {
   const handleWhatsAppClick = () => {
     window.open(
-      'https://wa.me/62895320282662?text=Halo, saya mau booking sesi foto!',
+      'https://wa.me/6285133332806?text=Halo, saya mau booking sesi foto!',
+      '_blank'
+    );
+  };
+
+  const handleOrder = () => {
+    const phoneNumber = '6285133332806'; // Ganti no WA klien
+    const message = `Halo Alensa Photography! Saya baru saja melihat portofolio di website dan ingin tanya-tanya tentang layanan fotografinya.`;
+
+    const encodedMessage = encodeURIComponent(message);
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
       '_blank'
     );
   };
@@ -15,7 +26,7 @@ const CTAButton = () => {
   return (
     <section className='px-6 py-8 animate-fade-in-up'>
       <button
-        onClick={handleWhatsAppClick}
+        onClick={handleOrder}
         className='w-full py-4 px-6 rounded-[20px] flex items-center justify-center 
                    bg-primary text-primary-foreground 
                    transition-all duration-300 ease-out
