@@ -5,13 +5,6 @@ const WhatsAppIcon = () => (
 );
 
 const CTAButton = () => {
-  const handleWhatsAppClick = () => {
-    window.open(
-      'https://wa.me/6285133332806?text=Halo, saya mau booking sesi foto!',
-      '_blank'
-    );
-  };
-
   const handleOrder = () => {
     const phoneNumber = '6285133332806'; // Ganti no WA klien
     const message = `Halo Alensa Photography! Saya baru saja melihat portofolio di website dan ingin tanya-tanya tentang layanan fotografinya.`;
